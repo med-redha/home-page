@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container>
-      <v-app-bar color="white" class="bar" flat>
+      <v-app-bar app color="white" class="bar" flat >
         <div class="d-flex align-center">
           <v-img
             alt=""

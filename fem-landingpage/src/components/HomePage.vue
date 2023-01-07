@@ -2,7 +2,7 @@
   <div class="home">
     <div class="sections_Container mt-8">
       <v-row>
-        <v-col cols="8">
+        <v-col md="9" cols="12">
           <div class="section_one">
             <div class="hero_section">
               <img
@@ -22,21 +22,19 @@
                   the power of the platforms back into the hands of the people.
                   But is it really fulfilling its promise
                 </p>
-                <v-btn depressed width="160" height="56" color="orange" dark>Read More</v-btn>
+                <v-btn depressed width="200" height="56" color="orange" dark
+                  >Read More</v-btn
+                >
               </div>
             </div>
           </div>
         </v-col>
-        <v-col cols="4">
+        <v-col md="3" cols="12">
           <div class="section_two">
-            <div class="st_head  mx-3">New</div>
-            <div
-              class="st_cntnt my-4 mx-4"
-              v-for="(item, index) in sectionTwo"
-              :key="index"
-            >
-              <div class="st_cntntTitle my-2">{{ item.title }}</div>
-              <div class="st_cntntSubtitle mb-4">{{ item.subtitle }}</div>
+            <div class="st_head">New</div>
+            <div class="st_cntnt" v-for="(item, index) in sectionTwo" :key="index">
+              <div class="st_cntntTitle">{{ item.title }}</div>
+              <div class="st_cntntSubtitle">{{ item.subtitle }}</div>
               <div class="devider"></div>
             </div>
           </div>

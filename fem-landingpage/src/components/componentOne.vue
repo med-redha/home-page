@@ -1,6 +1,6 @@
 <template>
   <div class="componentOne" :dig="dig">
-    <div class="cmp_imageHolde mr-4">
+    <div class="cmp_imageHolde ">
       <img class="cmp_img" :src="dig.img" alt="" />
     </div>
     <div class="cpm_txtHolder">
