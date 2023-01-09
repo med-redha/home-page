@@ -32,7 +32,11 @@
         <v-col md="3" cols="12">
           <div class="section_two">
             <div class="st_head">New</div>
-            <div class="st_cntnt" v-for="(item, index) in sectionTwo" :key="index">
+            <div
+              class="st_cntnt"
+              v-for="(item, index) in sectionTwo"
+              :key="index"
+            >
               <div class="st_cntntTitle">{{ item.title }}</div>
               <div class="st_cntntSubtitle">{{ item.subtitle }}</div>
               <div class="devider"></div>

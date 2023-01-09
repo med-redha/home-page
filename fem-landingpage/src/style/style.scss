@@ -5,8 +5,9 @@
     max-width: 600px;
 
     .bar {
-      width: 530px;
+      width: 610px;
       .v-toolbar__content {
+        width: 610px;
         .btn_holder {
           display: flex;
           align-items: center;
@@ -14,6 +15,8 @@
           .bar_btn {
             padding: 0;
           }
+        }
+        .nav_drawer{
         }
       }
     }
@@ -27,8 +30,8 @@
           gap: 30px;
           .hero_section {
             .hero_img {
-              width: 475px;
-              height: 375px;
+              width: 590px;
+              height: 475px;
               box-shadow: 0px 8px 12px rgb(0 0 0 / 25%);
             }
           }
@@ -56,7 +59,7 @@
           }
         }
         .section_two {
-          width: 540px;
+          width: 590px;
           height: 562px;
           display: flex;
           flex-direction: column;
@@ -157,13 +160,15 @@
   .bar {
     .v-toolbar__content {
       .btn_holder {
+        margin-left: 710px ;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 2px;
         .bar_btn {
           padding: 0;
         }
       }
+      
     }
   }
   .home {
@@ -174,21 +179,25 @@
       .section_one {
         .hero_section {
           .hero_img {
-            width: 720px;
+            width: 740px;
             box-shadow: 0px 8px 12px rgb(0 0 0 / 25%);
           }
         }
         .cntnt_holder {
           display: flex;
+          margin-top: 50px;
 
           .left_cntnt {
             font-family: "Inter", sans-serif;
-            font-weight: 800;
-            font-size: 36px;
+            font-weight: 900;
+            font-size: 48px;
           }
           .right_cntnt {
             display: flex;
             flex-direction: column;
+            margin-top: 20px;
+            margin-right: 50px;
+            gap: 30px;
 
             .right_txt {
               font-size: 15px;
@@ -201,38 +210,44 @@
       }
       .section_two {
         width: 350px;
-        height: 462px;
+        height: 582px;
         display: flex;
+        gap: 40px;
         flex-direction: column;
         background-color: rgba(3, 3, 17, 0.925);
         .st_head {
           color: rgb(236, 154, 2);
           font-family: "Inter", sans-serif;
-          font-size: 32px;
-          font-weight: 600;
+          font-size: 48px;
+          font-weight: 700;
           padding: 10px;
+          margin-top: 20px;
+          margin: 0px  15px;
         }
         .st_cntnt {
+          margin: 0px 15px;
           .devider {
             border: 1px solid #f1f1f1;
           }
           .st_cntntTitle {
             color: white;
             font-family: "Inter", sans-serif;
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 600;
           }
           .st_cntntSubtitle {
             color: white;
             font-family: "Inter", sans-serif;
-            font-size: 15px;
+            font-size: 18px;
             font-weight: 400;
+            margin-bottom: 9px;
           }
         }
       }
       .section_three {
+        margin-top: 50px;
         display: flex;
-        gap: 10px;
+        gap: 100px;
       }
     }
   }
