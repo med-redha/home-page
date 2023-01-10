@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    
     <div class="sections_Container mt-8">
       <v-row>
         <v-col md="9" cols="12">

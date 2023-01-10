@@ -3,6 +3,18 @@
 @media (max-width: 600px) {
   .container {
     max-width: 600px;
+    
+    .v-navigation-drawer--right {
+      left: 373px;
+    }
+    .v-overlay__scrim {
+      height: 0 !important;
+    }
+    
+    .item_title{
+      font-size: 1.3rem !important;
+      font-weight: 800;
+    }
 
     .bar {
       width: 610px;
@@ -16,7 +28,7 @@
             padding: 0;
           }
         }
-        .nav_drawer{
+        .nav_drawer {
         }
       }
     }
@@ -73,7 +85,6 @@
             padding: 10px;
             margin-top: 35px;
             margin-left: 15px;
-
           }
           .st_cntnt {
             display: flex;
@@ -132,7 +143,6 @@
           color: #afadadb0;
         }
         .cmp_txt {
-          
           .cpm_title {
             font-family: "Inter", sans-serif;
             font-size: 22px;
@@ -160,7 +170,7 @@
   .bar {
     .v-toolbar__content {
       .btn_holder {
-        margin-left: 710px ;
+        margin-left: 710px;
         display: flex;
         align-items: center;
         gap: 2px;
@@ -168,7 +178,6 @@
           padding: 0;
         }
       }
-      
     }
   }
   .home {
@@ -222,7 +231,7 @@
           font-weight: 700;
           padding: 10px;
           margin-top: 20px;
-          margin: 0px  15px;
+          margin: 0px 15px;
         }
         .st_cntnt {
           margin: 0px 15px;

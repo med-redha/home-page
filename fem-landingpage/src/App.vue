@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container>
-      <v-app-bar  color="white" class="bar" flat >
+      <v-app-bar color="white" class="bar" flat>
         <div class="d-flex align-center">
           <v-img
             alt=""
@@ -14,7 +14,7 @@
         </div>
         <v-spacer></v-spacer>
 
-        <div class="btn_holder && hidden-sm-and-down" >
+        <div class="btn_holder && hidden-sm-and-down">
           <v-btn text class="bar_btn">
             <span class="mr-2">Home</span>
           </v-btn>
@@ -29,34 +29,20 @@
           </v-btn>
         </div>
         <div class="nav_drawer && hidden-sm-and-up">
-          <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-          <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      bottom
-      temporary
-    >
-      <v-list
-        nav
-        dense
-      >
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
-        >
-          <v-list-item>
-            <v-list-item-title>Foo</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
+          <v-app-bar-nav-icon
+            @click.stop="drawer = !drawer"
+          ></v-app-bar-nav-icon>
         </div>
       </v-app-bar>
-
+      <v-navigation-drawer v-model="drawer" absolute temporary right width="500px">
+        <v-list dense class="my-12">
+          <v-list-item v-for="item in items" :key="item.title">
+            <v-list-item-content >
+              <v-list-item-title class="item_title my-6" >{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
       <v-main>
         <home-page />
       </v-main>
@@ -78,14 +64,20 @@ export default {
     return {
       drawer: false,
       group: null,
+      items: [
+        { title: "Home" },
+        { title: "New" },
+        { title: "Popular" },
+        { title: "trending" },
+        { title: "Categories" },
+      ],
     };
-    
   },
   watch: {
-      group () {
-        this.drawer = false
-      },
+    group() {
+      this.drawer = false;
     },
+  },
 };
 </script>
 <style lang="scss">
