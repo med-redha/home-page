@@ -42,7 +42,7 @@
           ></v-app-bar-nav-icon>
         </div>
       </v-app-bar>
-      <v-navigation-drawer v-model="drawer"  temporary right width="500px"  app>
+      <v-navigation-drawer v-model="drawer"  temporary right  app>
         <v-list dense class="my-12">
           <v-list-item v-for="item in items" :key="item.title">
             <v-list-item-content >
