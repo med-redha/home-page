@@ -145,19 +145,18 @@
       max-width: 600px;
       width: 100%;
       gap: 40px;
-      margin-left: 4px;
       .cmp_imageHolde {
         margin-right: 16px;
         .cmp_img {
           max-width: 150px;
-          width: 140%;
+          width: 120%;
           height: 200px;
         }
       }
       .cpm_txtHolder {
         display: flex;
         max-width: 200px;
-        width: 900%;
+        width: 100%;
         flex-direction: column;
         gap: 10px;
         .cpm_header {
@@ -169,7 +168,7 @@
         .cmp_txt {
           .cpm_title {
             max-width: 194px;
-            width: 95%;
+            width: 100%;
             font-family: "Inter", sans-serif;
             font-size: 18px;
             font-weight: 600;
