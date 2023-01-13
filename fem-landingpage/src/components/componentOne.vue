@@ -6,7 +6,9 @@
     <div class="cpm_txtHolder">
       <div class="cpm_header">{{dig.head}}</div>
       <div class="cmp_txt">
-        <div class="cpm_title" >{{dig.title}}</div>
+        <v-hover v-slot="{hover}">
+        <div class="cpm_title" :class="hover ? 'cmpTitle_hover' : ''">{{dig.title}}</div>
+      </v-hover>
         <div class="cpm_subtitle"> {{dig.subtitle}}</div>
       </div>
     </div>

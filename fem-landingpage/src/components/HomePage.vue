@@ -23,14 +23,14 @@
                   the power of the platforms back into the hands of the people.
                   But is it really fulfilling its promise
                 </p>
-                <v-btn depressed width="200" height="56" color="orange" dark
-                  >Read More</v-btn
-                >
+                <v-hover v-slot="{hover}">
+                <v-btn class="hello_btn" :class="hover ? 'hbtn_hover' : ''">Read More</v-btn>
+              </v-hover>
               </div>
             </div>
           </div>
         </v-col>
-        <v-col md="3" cols="12">
+        <v-col md="2" cols="12">
           <div class="section_two">
             <div class="st_head">New</div>
             <div
@@ -38,7 +38,9 @@
               v-for="(item, index) in sectionTwo"
               :key="index"
             >
-              <div class="st_cntntTitle">{{ item.title }}</div>
+            <v-hover v-slot="{hover}">
+              <div class="st_cntntTitle" :class="hover ? 'secTwo_titleHover' : ''">{{ item.title }}</div>
+            </v-hover>
               <div class="st_cntntSubtitle">{{ item.subtitle }}</div>
               <div class="devider"></div>
             </div>
@@ -47,7 +49,7 @@
       </v-row>
       <v-row>
         <v-col cols="12">
-          <div class="section_three">
+          <div class="section_three my-12 ">
             <component-one
               v-for="(dig, index) in components"
               :key="index"
