@@ -3,7 +3,7 @@
     
     <div class="sections_Container mt-8">
       <v-row>
-        <v-col md="9" cols="12">
+        <v-col md="8" sm="7" cols="12">
           <div class="section_one">
             <div class="hero_section">
               <img
@@ -30,7 +30,7 @@
             </div>
           </div>
         </v-col>
-        <v-col md="2" cols="12">
+        <v-col  md="2" cols="12">
           <div class="section_two">
             <div class="st_head">New</div>
             <div
@@ -48,8 +48,8 @@
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12">
-          <div class="section_three my-12 ">
+        <v-col   cols="12">
+          <div class="section_three my-10 ">
             <component-one
               v-for="(dig, index) in components"
               :key="index"
