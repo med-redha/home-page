@@ -1,45 +1,60 @@
 <template>
   <v-app>
     <v-container>
-      <v-app-bar color="white" class="bar" flat>
-        <div class="d-flex align-center">
-          <v-img
-            alt=""
-            class="shrink mr-2"
-            contain
-            src="./assets/images/logo.svg"
-            transition="scale-transition"
-            width="65"
-          />
-        </div>
-        <v-spacer></v-spacer>
-
-        <div class="btn_holder && hidden-sm-and-down">
-          <v-hover v-slot="{ hover }">
-            <v-btn plain class="bar_btn" :class="hover ? 'btn_hover' : ''">
-              <span class="mr-2">Home</span>
-            </v-btn>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <v-btn plain class="bar_btn" :class="hover ? 'btn_hover' : ''">
-              <span class="mr-2">New</span>
-            </v-btn>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <v-btn plain class="bar_btn" :class="hover ? 'btn_hover' : ''">
-              <span class="mr-2">Trending</span>
-            </v-btn>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <v-btn plain class="bar_btn" :class="hover ? 'btn_hover' : ''">
-              <span class="mr-2">Categories</span>
-            </v-btn>
-          </v-hover>
-        </div>
-        <div class="nav_drawer && hidden-md-and-up">
-          <v-app-bar-nav-icon
-            @click.stop="drawer = !drawer"
-          ></v-app-bar-nav-icon>
+      <v-app-bar color="white" flat>
+        <div class="bar">
+          <div class="d-flex align-center">
+            <v-img
+              alt=""
+              class="shrink mr-2"
+              contain
+              src="./assets/images/logo.svg"
+              transition="scale-transition"
+              width="65"
+            />
+          </div>
+          <v-spacer></v-spacer>
+          <div class="btn_holder && hidden-sm-and-down">
+            <v-hover v-slot="{ hover }">
+              <v-btn plain class="mr-1" :class="hover ? 'nav_hover' : ''"
+                >Home</v-btn
+              >
+            </v-hover>
+            <v-hover v-slot="{ hover }">
+              <v-btn
+                plain
+                class="bar_btn mr-2"
+                :class="hover ? 'nav_hover' : ''"
+                >New</v-btn
+              >
+            </v-hover>
+            <v-hover v-slot="{ hover }">
+              <v-btn
+                plain
+                class="bar_btn mr-2"
+                :class="hover ? 'nav_hover' : ''"
+                >Popular</v-btn
+              >
+            </v-hover>
+            <v-hover v-slot="{ hover }">
+              <v-btn
+                plain
+                class="bar_btn mr-2"
+                :class="hover ? 'nav_hover' : ''"
+                >Trending</v-btn
+              >
+            </v-hover>
+            <v-hover v-slot="{ hover }">
+              <v-btn plain class="bar_btn" :class="hover ? 'nav_hover' : ''"
+                >Categories</v-btn
+              >
+            </v-hover>
+          </div>
+          <div class="nav_drawer && hidden-md-and-up">
+            <v-app-bar-nav-icon
+              @click.stop="drawer = !drawer"
+            ></v-app-bar-nav-icon>
+          </div>
         </div>
       </v-app-bar>
       <v-navigation-drawer v-model="drawer" temporary app right>

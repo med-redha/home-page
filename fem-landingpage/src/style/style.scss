@@ -1,72 +1,255 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,200;1,600;1,700;1,800&display=swap");
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  .item_title {
+    font-size: 1.3rem !important;
+    font-weight: 800;
+  }
 
-  .container {
+  .bar {
     display: flex;
-    flex-direction: column;
     width: 100%;
-    margin: auto;
-    .item_title {
-      font-size: 1.3rem !important;
-      font-weight: 800;
-    }
-
-    .bar {
-      .v-toolbar__content {
-        width: 100%;
-        .btn_holder {
-          display: flex;
-          align-items: center;
-          gap: 0.625rem;
-          .bar_btn {
-            padding: 0;
-          }
-        }
-        .nav_drawer {
+    .v-toolbar__content {
+      width: 100%;
+      .btn_holder {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        .bar_btn {
+          padding: 0;
         }
       }
     }
-    .home {
-     
-      .sections_Container {
+  }
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .sections_Container {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      .section_one {
         display: flex;
         flex-direction: column;
-        gap: 3.75rem;
+        gap: 1.875;
+        .hero_section {
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          .hero_img {
+            justify-self: center;
+            max-width: 36.875rem;
+            max-height: 30rem;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            box-shadow: 0rem 0.5rem 0.75rem rgb(0 0 0 / 25%);
+          }
+        }
+        .cntnt_holder {
+          display: flex;
+          flex-direction: column;
+
+          .left_cntnt {
+            font-family: "Inter", sans-serif;
+            font-weight: 800;
+            font-size: 2.25rem;
+          }
+          .right_cntnt {
+            display: flex;
+            flex-direction: column;
+            .hello_btn {
+              background-color: orange;
+              width: 200px;
+              height: 44px;
+              color: white;
+              margin-top: 4px;
+            }
+
+            .right_txt {
+              font-size: 1.25rem;
+              font-family: "Inter", sans-serif;
+              font-weight: 400;
+              color: #918989;
+              max-width: 28.125rem;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .section_two {
+        max-width: 36.875rem;
+        width: 100%;
+        height: calc(767px - 0px);
+        display: flex;
+        flex-direction: column;
+        padding: auto;
+        justify-content: center;
+        background-color: rgba(3, 3, 17, 0.925);
+        .st_head {
+          color: rgb(236, 154, 2);
+          font-family: "Inter", sans-serif;
+          font-size: 2.625rem;
+          font-weight: 600;
+          margin: 1.125rem 0.938rem 0rem 0.625rem;
+        }
+        .st_cntnt {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+          margin: 0rem 1.25rem;
+          .devider {
+            margin-top: 0.625rem;
+            border: 1px solid #f1f1f1;
+          }
+          .st_cntntTitle {
+            font-family: "Inter", sans-serif;
+            color: white;
+            font-size: 1.563rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            margin-top: 0.25rem;
+          }
+          .st_cntntSubtitle {
+            font-family: "Inter", sans-serif;
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin-bottom: 1.875rem;
+          }
+        }
+      }
+      .section_three {
+        display: flex;
+        max-width: 37.5rem;
+        width: 100%;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+  .componentOne {
+    display: flex;
+    max-width: 37.5rem;
+    width: 100%;
+    gap: 2.5rem;
+    .cmp_imageHolde {
+      margin: 0rem 1rem;
+      .cmp_img {
+        max-width: 9.375rem;
+        width: 120%;
+        height: 12.5rem;
+      }
+    }
+    .cpm_txtHolder {
+      display: flex;
+      max-width: 12.5rem;
+      width: 100%;
+      flex-direction: column;
+      gap: 0.625rem;
+      .cpm_header {
+        font-family: "Inter", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #afadadb0;
+      }
+      .cmp_txt {
+        .cpm_title {
+          max-width: 12.125rem;
+          width: 100%;
+          font-family: "Inter", sans-serif;
+          font-size: 1.125rem;
+          font-weight: 600;
+        }
+        .cpm_subtitle {
+          max-width: 12.125rem;
+          width: 100%;
+          color: #918989;
+          font-size: 1rem;
+          font-family: "Inter", sans-serif;
+          font-weight: 500;
+          margin-top: 0.625rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 1440px;
+    width: 100%;
+    .v-toolbar__content {
+      width: 100%;
+      
+      
+    .bar {
+      width: 100%;
+      .btn_holder {
+        justify-self: flex-end;
+        gap: 20px;
+        .v-btn{
+          padding: 0px;
+          margin: 2px;
+          &.nav_hover{
+            color:  rgb(236, 154, 2);
+          }
+        }
+      
+      }
+    }}
+    .home {
+      .sections_Container {
+        display: flex;
         .section_one {
           display: flex;
           flex-direction: column;
-          margin: 0rem 0.5rem;
-          gap: 1.875;
+          margin: 1rem 0.5rem;
           .hero_section {
             .hero_img {
-              max-width: 36.875rem;
+              max-width: 58.875rem;
               width: 100%;
+              height: 100%;
               object-fit: cover;
-              height: calc(100vw - 50px);
               box-shadow: 0rem 0.5rem 0.75rem rgb(0 0 0 / 25%);
             }
           }
           .cntnt_holder {
             display: flex;
-            flex-direction: column;
-
+            flex-direction: row;
+            margin: 1rem 0rem;
             .left_cntnt {
               font-family: "Inter", sans-serif;
               font-weight: 800;
-              font-size: 2.25rem;
+              font-size: 3.65rem;
+              max-width: 400px;
+              width: 100%;
             }
             .right_cntnt {
               display: flex;
               flex-direction: column;
+              margin: 1.4rem 0rem;
+
               .hello_btn {
                 background-color: orange;
                 width: 200px;
                 height: 44px;
                 color: white;
                 margin-top: 4px;
-                
+                transition-duration: 0.8s;
+                &.hbtn_hover {
+                  background-color: rgba(3, 3, 17, 0.925);
+                }
               }
-              
+
               .right_txt {
                 font-size: 1.25rem;
                 font-family: "Inter", sans-serif;
@@ -79,11 +262,12 @@
           }
         }
         .section_two {
-          max-width: 36.875rem;
+          min-width: 19.875rem;
           width: 100%;
-          height: calc(767px - 0px);
           display: flex;
-          margin: 5rem 0.5rem 0rem ;
+          max-height: 650px;
+          height: 100%;
+          margin: 1rem 0.01rem 0rem;
           flex-direction: column;
           justify-content: center;
           background-color: rgba(3, 3, 17, 0.925);
@@ -92,62 +276,58 @@
             font-family: "Inter", sans-serif;
             font-size: 2.625rem;
             font-weight: 600;
-            padding: 0.625rem;
-            margin:1.125rem 0.938rem 0rem 0.625rem; 
+            margin: 0rem 0.938rem 0rem 0.625rem;
           }
           .st_cntnt {
             display: flex;
             flex-direction: column;
-            gap: 1.25rem;
-            margin: 0rem 1.25rem;
+            gap: 1rem;
             .devider {
-              margin-top: 0.625rem;
               border: 1px solid #f1f1f1;
             }
             .st_cntntTitle {
               font-family: "Inter", sans-serif;
               color: white;
-              font-size: 1.563rem;
+              font-size: 1.363rem;
               font-weight: 500;
-              margin-bottom: 0.25rem;
-              margin-top: 0.25rem;
+              &.secTwo_titleHover {
+                color: rgb(236, 154, 2);
+                cursor: pointer;
+              }
             }
             .st_cntntSubtitle {
               font-family: "Inter", sans-serif;
               color: white;
               font-size: 1.125rem;
               font-weight: 400;
-              margin-bottom: 1.875rem;
             }
           }
         }
         .section_three {
           display: flex;
-          max-width: 37.5rem;
+          flex-direction: row;
+          max-width: 81.5rem;
           width: 100%;
-          flex-direction: column;
-          gap: 40px;
-          margin-bottom: 2.5rem;
-          margin: 0rem 1.25rem;
+          gap: 80px;
         }
       }
     }
     .componentOne {
       display: flex;
-      max-width: 37.5rem;
+      max-width: 60.5rem;
       width: 100%;
-      gap: 2.5rem;
+      gap: 1.5rem;
       .cmp_imageHolde {
         margin: 0rem 1rem;
+        height: 190px;
         .cmp_img {
-          max-width: 9.375rem;
-          width: 120%;
-          height: 12.5rem;
+          width: 7.375rem;
+          height: 80%;
         }
       }
       .cpm_txtHolder {
         display: flex;
-        max-width: 12.5rem;
+        max-width: 50.5rem;
         width: 100%;
         flex-direction: column;
         gap: 0.625rem;
@@ -158,16 +338,18 @@
           color: #afadadb0;
         }
         .cmp_txt {
+          max-width: 50.5rem;
+          width: 100%;
           .cpm_title {
-            max-width: 12.125rem;
-            width: 100%;
+            max-width: 48.5rem;
+            width: 115%;
             font-family: "Inter", sans-serif;
-            font-size: 1.125rem;
-            font-weight: 600;
+            font-size: 1rem;
+            font-weight: 700;
           }
           .cpm_subtitle {
-            max-width: 12.125rem;
-            width: 100%;
+            max-width: 48.5rem;
+            width: 150%;
             color: #918989;
             font-size: 1rem;
             font-family: "Inter", sans-serif;
@@ -178,165 +360,4 @@
       }
     }
   }
-
-
-
-@media (min-width: 900px) {
-  .container {
-  .bar {
-    .v-toolbar__content {
-      .btn_holder {
-        display: flex;
-        align-items: center;
-        max-width: 37%;
-        width: 100%;
-        gap: 2px;
-        .bar_btn {
-          padding: 0.5;
-          &.btn_hover {
-            color: orange;
-          }
-        }
-      }
-    }
-  }
-  .home {
-    .sections_Container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      .section_one {
-        .hero_section {
-          .hero_img {
-            max-width: 1200px;
-            height: 400px;
-            width: 100%;
-            box-shadow: 0px 8px 12px rgb(0 0 0 / 25%);
-          }
-        }
-        .cntnt_holder {
-          display: flex;
-          margin-top: 30px;
-
-          .left_cntnt {
-            font-family: "Inter", sans-serif;
-            font-weight: 900;
-            font-size: 48px;
-          }
-          .right_cntnt {
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-            margin-right: 50px;
-            gap: 30px;
-            .hello_btn {
-                background-color: orange;
-                width: 200px;
-                height: 44px;
-                color: white;
-                margin-top: 4px;
-                &.hbtn_hover{
-                  background-color: rgba(3, 3, 17, 0.925);
-                }
-              }
-
-            .right_txt {
-              font-size: 15px;
-              font-family: "Inter", sans-serif;
-              font-weight: 400;
-              color: #918989;
-            }
-          }
-        }
-      }
-      .section_two {
-        max-width: 350px;
-        width: 100%;
-        height: 582px;
-        display: flex;
-        gap: 40px;
-        flex-direction: column;
-        background-color: rgba(3, 3, 17, 0.925);
-        .st_head {
-          color: rgb(236, 154, 2);
-          font-family: "Inter", sans-serif;
-          font-size: 42px;
-          font-weight: 700;
-          padding: 10px;
-          margin-top: 20px;
-          margin: 0px 15px;
-        }
-        .st_cntnt {
-          margin: 0px 15px;
-          .devider {
-            border: 1px solid #f1f1f1;
-          }
-          .st_cntntTitle {
-            color: white;
-            font-family: "Inter", sans-serif;
-            font-size: 20px;
-            font-weight: 600;
-            &.secTwo_titleHover {
-              color: orange;
-            }
-          }
-          .st_cntntSubtitle {
-            color: white;
-            font-family: "Inter", sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            margin-bottom: 9px;
-          }
-        }
-      }
-      .row{
-        width: 100%;
-      .section_three {
-        margin-top: 30px;
-        display: flex;
-        width: 100%;
-        gap: 160px;
-      }
-    }
-    }
-  }
-  .componentOne {
-    max-width: 800px;
-    width: 100%;
-    display: flex;
-    gap: 30px;
-    .cmp_imageHolde {
-      .cmp_img {
-        width: 100px;
-        height: 115px;
-      }
-    }
-    .cpm_txtHolder {
-      max-width: 470px;
-      width: 100%;
-      .cpm_header {
-        font-family: "Inter", sans-serif;
-        font-size: 32px;
-        font-weight: 700;
-        color: #afadadb0;
-      }
-      .cmp_txt {
-        width: 250px;
-        .cpm_title {
-          font-family: "Inter", sans-serif;
-          font-size: 16px;
-          font-weight: 600;
-          &.cmpTitle_hover {
-            color: rgba(255, 115, 0, 0.911);
-          }
-        }
-        .cpm_subtitle {
-          color: #918989;
-          font-size: 15px;
-          font-family: "Inter", sans-serif;
-          font-weight: 500;
-        }
-      }
-    }
-  }
-}}
+}

@@ -1,16 +1,17 @@
 <template>
   <div class="home">
     
-    <div class="sections_Container mt-8">
+    <div class="sections_Container ">
       <v-row>
-        <v-col md="8" sm="7" cols="12">
+        <v-col md="8" sm="12"  cols="12">
           <div class="section_one">
             <div class="hero_section">
-              <img
-                class="hero_img"
-                src="../assets/images/image-web-3-desktop.jpg"
-                alt=""
-              />
+              <picture>
+  <source media="(min-width: 900px)" srcset="../assets/images/image-web-3-desktop.jpg">
+  <source media="(max-width: 899px)" srcset="../assets/images/image-web-3-mobile.jpg">
+  <img  class="hero_img"  src="../assets/images/image-web-3-desktop.jpg" alt="">
+  
+</picture>
             </div>
             <div class="cntnt_holder">
               <div class="left_cntnt">
@@ -30,7 +31,7 @@
             </div>
           </div>
         </v-col>
-        <v-col  md="2" cols="12">
+        <v-col  md="4" sm="12" cols="12">
           <div class="section_two">
             <div class="st_head">New</div>
             <div
@@ -49,7 +50,7 @@
       </v-row>
       <v-row>
         <v-col   cols="12">
-          <div class="section_three my-10 ">
+          <div class="section_three  ">
             <component-one
               v-for="(dig, index) in components"
               :key="index"
